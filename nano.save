@@ -1,0 +1,24 @@
+01	#!/bin/bash
+02	# progbar: una barra de progreso en bash
+03	# por ratoncio
+04	# ver. 0.1
+05	SPEED=0.1
+06	DEL="\\x08\\x08\\x08\\x08\\x08\\x08\\x08\\x08"
+07	PID=$1
+08	while [ -d /proc/$PID ];do
+09	    echo -en "0-------" && sleep $SPEED && echo -en $DEL
+10	    echo -en "-0------" && sleep $SPEED && echo -en $DELecho -en "--0-----" && sleep $SPEED && echo -en $DEL
+12	    echo -en "---0----" && sleep $SPEED && echo -en $DEL
+13	    echo -en "----0---" && sleep $SPEED && echo -en $DEL
+14	    echo -en "-----0--" && sleep $SPEED && echo -en $DEL
+15	    echo -en "------0-" && sleep $SPEED && echo -en $DEL
+16	    echo -en "-------0" && sleep $SPEED && echo -en $DEL
+17	    echo -en "------0-" && sleep $SPEED && echo -en $DEL
+18	    echo -en "-----0--" && sleep $SPEED && echo -en $DEL
+19	    echo -en "----0---" && sleep $SPEED && echo -en $DEL
+20	    echo -en "---0----" && sleep $SPEED && echo -en $DEL
+21	    echo -en "--0-----" && sleep $SPEED && echo -en $DEL
+22	    echo -en "-0------" && sleep $SPEED && echo -en $DEL
+23	done
+24	echo -en $DEL"        "$DEL
+25	exit 0
